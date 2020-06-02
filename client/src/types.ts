@@ -159,3 +159,7 @@ export type RatesType = {
     ZAR?: number
     ZMW?: number
 }
+
+export type ErrorType = {
+    error: string
+}

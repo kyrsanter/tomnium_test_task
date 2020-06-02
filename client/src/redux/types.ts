@@ -1,5 +1,5 @@
-import {FETCHING_DATA, FILTER_BY_NAME, GET_DATA} from "./actions";
-import {DataType} from "../types";
+import {FETCHING_DATA, FILTER_BY_NAME, GET_DATA, GET_ERROR} from "./actions";
+import {DataType, ErrorType} from "../types";
 
 export type FetchingDataAtionCreatorType = {
     type: typeof FETCHING_DATA
@@ -15,5 +15,10 @@ export type FilterByNameActionCreatorType = {
     payload: string
 }
 
-export type CombineActionCreatorType = FetchingDataAtionCreatorType | GetDataAtionCreatorType | FilterByNameActionCreatorType
+export type GetErrorActionCreatorType = {
+    type: typeof GET_ERROR
+    payload: ErrorType
+}
+
+export type CombineActionCreatorType = FetchingDataAtionCreatorType | GetDataAtionCreatorType | FilterByNameActionCreatorType | GetErrorActionCreatorType
 

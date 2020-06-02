@@ -1,6 +1,11 @@
-import {FETCHING_DATA, FILTER_BY_NAME, GET_DATA} from "./actions";
-import {FetchingDataAtionCreatorType, FilterByNameActionCreatorType, GetDataAtionCreatorType} from "./types";
-import {DataType} from "../types";
+import {FETCHING_DATA, FILTER_BY_NAME, GET_DATA, GET_ERROR} from "./actions";
+import {
+    FetchingDataAtionCreatorType,
+    FilterByNameActionCreatorType,
+    GetDataAtionCreatorType,
+    GetErrorActionCreatorType
+} from "./types";
+import {DataType, ErrorType} from "../types";
 
 export const fetchingDataAtionCreator = (): FetchingDataAtionCreatorType => {
     return {
@@ -19,5 +24,12 @@ export const filterByNameActionCreator = (letters: string): FilterByNameActionCr
     return {
         type: FILTER_BY_NAME,
         payload: letters
+    }
+};
+
+export const getErrorActionCreator = (error: ErrorType): GetErrorActionCreatorType => {
+    return {
+        type: GET_ERROR,
+        payload: error
     }
 };

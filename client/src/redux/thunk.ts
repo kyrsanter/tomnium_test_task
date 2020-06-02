@@ -1,9 +1,15 @@
 import {Service} from "../service";
-import {fetchingDataAtionCreator, getDataAtionCreator} from "./action-creators";
+import {fetchingDataAtionCreator, getDataAtionCreator, getErrorActionCreator} from "./action-creators";
+import {store} from "./store";
 
 export const getDataThunk = () => async (dispatch: any) => {
     const service = new Service();
     dispatch(fetchingDataAtionCreator());
     let response = await service.getData();
-    dispatch(getDataAtionCreator(response))
+    if (response.error) {
+        dispatch(getErrorActionCreator(response))
+    }
+    else {
+        dispatch(getDataAtionCreator(response))
+    }
 }
