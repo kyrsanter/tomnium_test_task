@@ -1,0 +1,9 @@
+.filter {
+    margin-bottom: 20px;
+}
+
+.filter input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+}

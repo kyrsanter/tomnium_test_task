@@ -1,0 +1,65 @@
+.currency-list__item {
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+}
+
+.currency-list__item.head {
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.currency-list__item.head .convert-form{
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.currency-list__item .idx{
+    width: 50px;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.currency-list__item .name {
+    width: 12%;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.currency-list__item .price {
+    width: 28%;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.convert-form {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 20px;
+ }
+
+.convert-form .input {
+    width: 50%;
+}
+
+.convert-form .input input {
+    outline: none;
+    padding: 10px;
+    width: calc(100% - 22px);
+    border-radius: 5px;
+}
+
+.convert-form .input-result {
+    font-weight: bold;
+    color: red;
+}
